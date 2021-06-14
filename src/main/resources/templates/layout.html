@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="https://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="https://thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Examen Architecture JEE et Middlewares</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.3.1/css/bootstrap.css">
+    <script src="webjars/jquery/3.0.0/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/popper.min.js"></script>
+    <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-primary navbar-expand-md">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/index">Liste des Examen Architecture JEE et Middlewares</a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+            <span class="sr-only">Menu</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navcol-1">
+            <ul class="nav navbar-nav ">
+<!--                <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>-->
+            </ul>
+
+            <div class=" my-2 my-lg-0 ml-auto">
+<!--                <ul class="nav">-->
+<!--                    <li>-->
+<!--                        <span class="nav-link btn btn-light  my-2 my-sm-0" sec:authorize="isAuthenticated()">-->
+<!--                            <span sec:authentication="name"></span>-->
+<!--                        </span>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a class="nav-link btn btn-light  my-2 my-sm-0" sec:authorize="isAnonymous()" th:href="@{login}">Login</a>-->
+<!--                        <a class="nav-link btn btn-light my-2 my-sm-0" sec:authorize="isAuthenticated()" th:href="@{logout}">Logout</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+                <a class="nav-link btn btn-primary btn-outline-light  my-2 my-sm-0" sec:authorize="isAnonymous()" th:href="@{login}">Login</a>
+                <a class="nav-link btn btn-primary btn-outline-light  my-2 my-sm-0" sec:authorize="isAuthenticated()" th:href="@{logout}">Logout</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--<nav class="navbar navbar-dark bg-primary navbar-expand-md">-->
+<!--    <div class="container-fluid">-->
+<!--        <div class="navbar-header">-->
+<!--            -->
+<!--        <a class="navbar-brand" href="/index">Liste des patients</a>-->
+<!--        </div>-->
+
+<!--        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">-->
+<!--            <span class="sr-only">Menu</span>-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+
+<!--        <div class="collapse navbar-collapse" id="navcol-2">-->
+<!--            <ul class="navbar-nav ml-auto">-->
+<!--                <li class="nav-item" >-->
+<!--                    <div class="nav-link">-->
+<!--                        <span sec:authorize="isAuthenticated()">-->
+<!--                            <span sec:authentication="name"></span>-->
+<!--                        </span>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <li class="nav-item" >-->
+<!--                    <div >-->
+<!--                        <a class="nav-link btn btn-outline-success my-2 my-sm-0" sec:authorize="isAnonymous()" th:href="@{login}">Login</a>-->
+<!--                        <a class="nav-link btn btn-outline-primary my-2 my-sm-0" sec:authorize="isAuthenticated()" th:href="@{logout}">Logout</a>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+<section layout:fragment="content">
+
+</section>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un nouveau Patient</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="container">
+        <div class="card mt-3">
+            <div class="card-header text-center">Ajouter un nouveau Patient</div>
+            <div class="card-body">
+                <form th:action="@{savePatient}" method="post" th:object="${patient}">
+                    <div class="form-group row">
+                        <div class="col-10 mb-3">
+                            <label for="NomInput">Votre Nom </label>
+                            <input type="text" class="form-control" id="NomInput"  placeholder="Nom" th:field="*{nom}">
+                            <span th:errors="${patient.nom}" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-10 mb-3">
+                            <label for="example-date-input" class="col-form-label">DateNaisse</label>
+                            <input class="form-control" type="date" value="1998-01-01" id="example-date-input" th:field="*{dateNaissance}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-10 mb-3">
+                            <label for="example-number-input" class=" col-form-label">Email</label>
+                            <input class="form-control" type="email" value="example@example" id="example-number-input" th:field="*{email}">
+                            <span th:errors="${patient.email}" class="text-danger"></span>
+                        </div>
+                    </div>
+<!--                    <div class="form-group row">-->
+<!--                        <div class="col-10 mb-3">-->
+<!--                            <div class="form-check">-->
+<!--                                <label class="form-check-label">-->
+<!--                                    <input type="checkbox" class="form-check-input" th:field="*{malade}">-->
+<!--                                    Malade-->
+<!--                                </label>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+</div>
+
+</body>
+</html>
